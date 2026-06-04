@@ -22,4 +22,4 @@ def load_api_key_from_file(file_path: str, env_var: str = "OPENAI_API_KEY") -> s
         raise ValueError(f"API key file is empty: {key_path}")
 
     os.environ[env_var] = api_key
-    return api_key
+    return True
