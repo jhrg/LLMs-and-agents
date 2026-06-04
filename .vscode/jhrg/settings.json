@@ -1,0 +1,45 @@
+{
+    // See https://code.visualstudio.com/docs/editor/settings for more information about this file.
+
+   "HOMEBREW": "/opt/homebrew",
+  "PATH": "${config:HOMEBREW}/bin:${env:PATH}",
+
+    "rewrap.wrappingColumn": 120,
+    "rewrap.autoWrap.enabled": true,
+
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 120,
+    "editor.rulers": [80, 120],
+    
+    "files.associations": {
+        "*.xsd": "xml"
+    },
+
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80,
+        "editor.rulers": [80, 120]
+    },
+
+    "[asciidoc]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80,
+        "editor.rulers": [80, 120]
+    },
+    
+    "cSpell.words": [
+        "adoc",
+        "asciidoctor",
+        "worktree"
+    ],
+      
+    "terminal.integrated.env.osx": {
+        "PATH": "${config:PATH}",
+        "source": "~/opt/miniforge3/etc/profile.d/conda.sh"
+    },
+    "terminal.integrated.env.linux": {
+        "PATH": "${config:PATH}",
+        "source": "~/opt/miniforge3/etc/profile.d/conda.sh"
+    }
+
+}
