@@ -28,54 +28,12 @@ Tool/Framework
 | Definition | Examples/Use Cases | Reference | Link |
 | ---- | ---- | ---- | ---- |
 | Hugging Face | A platform hosting pre-trained models and datasets for NLP tasks. | Accessing GPT-2, BERT, Stable Diffusion | Hugging Face |
-
-LangChain
-
-A framework for building applications with LLMs, agents, and tools.
-
-Creating chatbots with memory and web search
-
-LangChain
-
-AutoGen
-
-A library for creating multi-agent conversational systems.
-
-Simulating debates between AI agents
-
-AutoGen
-
-CrewAI
-
-A framework for assembling collaborative AI agents with role-based tasks.
-
-Task automation with specialized agents
-
-CrewAI
-
-BeeAI
-
-A lightweight framework to build production-ready multi-agent systems
-
-Distributed problem-solving systems
-
-BeeAI
-
-LlamaIndex
-
-A tool to connect LLMs to structured or unstructured data sources.
-
-Building Q&A systems over private documents
-
-LlamaIndex
-
-LangGraph
-
-A library for building stateful, multi-actor applications with LLMs.
-
-Cyclic workflows, agent simulations
-
-LangGraph
+| LangChain | A framework for building applications with LLMs, agents, and tools. | Creating chatbots with memory and web search | LangChain |
+| AutoGen | A library for creating multi-agent conversational systems. | Simulating debates between AI agents | AutoGen |
+| CrewAI | A framework for assembling collaborative AI agents with role-based tasks. | Task automation with specialized agents | CrewAI |
+| BeeAI | A lightweight framework to build production-ready multi-agent systems | Distributed problem-solving systems | BeeAI |
+| LlamaIndex | A tool to connect LLMs to structured or unstructured data sources. | Building Q&A systems over private documents | LlamaIndex |
+| LangGraph | A library for building stateful, multi-actor applications with LLMs. | Cyclic workflows, agent simulations | LangGraph |
 
 Retrieval & Infrastructure
 Tool/Framework
