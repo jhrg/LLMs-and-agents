@@ -40,30 +40,9 @@ Tool/Framework
 
 | Definition | Examples/Use Cases | Reference | Link |
 | ---- | ---- | ---- | ---- |
-
-FAISS
-
-A library for efficient similarity search of dense vectors.
-
-Retrieving top-k documents for RAG
-
-FAISS
-
-Pinecone
-
-A managed cloud service for vector database operations.
-
-Storing embeddings for real-time retrieval
-
-Pinecone
-
-Haystack
-
-An end-to-end framework for building RAG pipelines.
-
-Deploying enterprise search systems
-
-Haystack
+| FAISS | A library for efficient similarity search of dense vectors. | Retrieving top-k documents for RAG | FAISS |
+| Pinecone | A managed cloud service for vector database operations. | Storing embeddings for real-time retrieval | Pinecone |
+| Haystack | An end-to-end framework for building RAG pipelines. | Deploying enterprise search systems | Haystack |
 
 Advanced Prompting Techniques
 Concept
