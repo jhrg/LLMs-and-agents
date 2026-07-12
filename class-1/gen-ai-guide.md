@@ -5,29 +5,12 @@ Whether you're developing chatbots, automation workflows, or knowledge systems, 
 
 Core GenAI Concepts & Terminologies
 Foundational Concepts
-Term
 
-Definition
-
-Examples/Use Cases
-
-LLM
-
-A type of AI model trained on vast amounts of text data to understand and generate human-like language.
-
-GPT-o1, Claude, LLaMA
-
-Prompting
-
-A technique for designing input instructions to guide LLM outputs.
-
-"Write a summary in 3 sentences," "Answer as a cybersecurity expert."
-
-Prompt Templates
-
-Reusable, structured prompts with placeholders for dynamic inputs.
-
-"Explain {concept} like I'm 5 years old."
+| Term | Definition | Examples/Use Cases |
+| ---- | ---- | ---- | 
+| LLM | A type of AI model trained on vast amounts of text data to understand and generate human-like language. | GPT-o1, Claude, LLaMA |
+| Prompting | A technique for designing input instructions to guide LLM outputs. | "Write a summary in 3 sentences," "Answer as a cybersecurity expert." |
+| Prompt Templates | Reusable, structured prompts with placeholders for dynamic inputs. | "Explain {concept} like I'm 5 years old." |
 
 RAG (Retrieval-Augmented Generation)
 
@@ -89,19 +72,9 @@ Tools & Frameworks
 Model Development & Deployment
 Tool/Framework
 
-Definition
-
-Examples/Use Cases
-
-Reference Link
-
-Hugging Face
-
-A platform hosting pre-trained models and datasets for NLP tasks.
-
-Accessing GPT-2, BERT, Stable Diffusion
-
-Hugging Face
+| Definition | Examples/Use Cases | Reference | Link |
+| ---- | ---- | ---- | ---- |
+| Hugging Face | A platform hosting pre-trained models and datasets for NLP tasks. | Accessing GPT-2, BERT, Stable Diffusion | Hugging Face |
 
 LangChain
 
@@ -154,11 +127,8 @@ LangGraph
 Retrieval & Infrastructure
 Tool/Framework
 
-Definition
-
-Examples/Use Cases
-
-Reference Link
+| Definition | Examples/Use Cases | Reference | Link |
+| ---- | ---- | ---- | ---- |
 
 FAISS
 
