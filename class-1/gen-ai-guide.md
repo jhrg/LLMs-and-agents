@@ -45,35 +45,13 @@ Tool/Framework
 | Haystack | An end-to-end framework for building RAG pipelines. | Deploying enterprise search systems | Haystack |
 
 Advanced Prompting Techniques
-Concept
 
-Definition
-
-Example
-
-Few-Shot Prompting
-
-Providing examples in the prompt to guide the model's output format.
-
-"Translate to French: 'Hello' → 'Bonjour'; 'Goodbye' → __”
-
-Zero-Shot Prompting
-
-Directly asking the model to perform a task without examples.
-
-"Classify this tweet as positive, neutral, or negative: {tweet}”
-
-Chain-of-Thought
-
-Encouraging step-by-step reasoning.
-
-"First, calculate X. Then, compare it to Y. Final answer: ___”
-
-Prompt Chaining
-
-Breaking complex tasks into smaller prompts executed sequentially.
-
-Prompt 1: Extract keywords → Prompt 2: Generate summary from keywords.
+| Concept | Definition | Example |
+| ---- | ---- | ---- |
+| Few-Shot Prompting | Providing examples in the prompt to guide the model's output format. | "Translate to French: 'Hello' → 'Bonjour'; 'Goodbye' → __” |
+| Zero-Shot Prompting | Directly asking the model to perform a task without examples. | "Classify this tweet as positive, neutral, or negative: {tweet}” |
+| Chain-of-Thought | Encouraging step-by-step reasoning. | "First, calculate X. Then, compare it to Y. Final answer: ___” |
+| Prompt Chaining | Breaking complex tasks into smaller prompts executed sequentially. | Prompt 1: Extract keywords → Prompt 2: Generate summary from keywords. |
 
 Key Architectures & Workflows
 RAG Pipeline
