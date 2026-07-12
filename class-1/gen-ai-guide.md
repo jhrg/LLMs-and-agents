@@ -11,62 +11,15 @@ Foundational Concepts
 | LLM | A type of AI model trained on vast amounts of text data to understand and generate human-like language. | GPT-o1, Claude, LLaMA |
 | Prompting | A technique for designing input instructions to guide LLM outputs. | "Write a summary in 3 sentences," "Answer as a cybersecurity expert." |
 | Prompt Templates | Reusable, structured prompts with placeholders for dynamic inputs. | "Explain {concept} like I'm 5 years old." |
-
-RAG (Retrieval-Augmented Generation)
-
-Combines retrieval from external knowledge sources with LLM generation to enhance factual accuracy.
-
-Answering questions with real-time data (for example, 
-RAG Paper
-)
-
-Retriever
-
-A system component designed to fetch relevant information from a dataset or database.
-
-Vector similarity search using FAISS, Elasticsearch
-
-Agent
-
-An autonomous AI system that can plan, reason, and execute tasks using tools.
-
-AutoGPT, LangChain Agents
-
-Multi-Agent System
-
-A framework in which multiple AI agents collaborate to solve complex tasks.
-
-Microsoft AutoGen, CrewAI
-
-Chain-of-Thought
-
-A prompting technique that encourages models to decompose problems into intermediate steps.
-
-"Let's think step by step…"
-
-Hallucination Mitigation
-
-Strategies to reduce incorrect or fabricated outputs from LLMs.
-
-RAG, fine-tuning, prompt constraints
-
-Vector Database
-
-A database optimized for storing and querying vector embeddings.
-
-Pinecone, Chroma, Weaviate
-
-Orchestration
-
-Tools to manage and coordinate workflows involving multiple AI components.
-
-LangChain, LlamaIndex
-
-Fine-tuning
-
-Adapting pre-trained models for specific tasks using domain-specific data.
-
-LoRA (Low-Rank Adaptation), QLoRA (quantized fine-tuning)
+| RAG (Retrieval-Augmented Generation) | Combines retrieval from external knowledge sources with LLM generation to enhance factual accuracy. | Answering questions with real-time data (for example, RAG Paper) |
+| Retriever | A system component designed to fetch relevant information from a dataset or database. | Vector similarity search using FAISS, Elasticsearch |
+| Agent | An autonomous AI system that can plan, reason, and execute tasks using tools. | AutoGPT, LangChain Agents |
+| Multi-Agent System | A framework in which multiple AI agents collaborate to solve complex tasks. | Microsoft AutoGen, CrewAI |
+| Chain-of-Thought | A prompting technique that encourages models to decompose problems into intermediate steps. | "Let's think step by step…" |
+| Hallucination Mitigation | Strategies to reduce incorrect or fabricated outputs from LLMs. | RAG, fine-tuning, prompt constraints |
+| Vector Database | A database optimized for storing and querying vector embeddings. | Pinecone, Chroma, Weaviate |
+| Orchestration | Tools to manage and coordinate workflows involving multiple AI components. | LangChain, LlamaIndex |
+| Fine-tuning | Adapting pre-trained models for specific tasks using domain-specific data. | LoRA (Low-Rank Adaptation), QLoRA (quantized fine-tuning) |
 
 Tools & Frameworks
 Model Development & Deployment
