@@ -1,9 +1,11 @@
-Introduction
+# Generative AI and Agents Guide
+Copied and edited from a Coursea course.
+## Introduction
 Generative AI (GenAI) has evolved from basic text and image generation to powering complex systems such as AI agents, enterprise automation, and reasoning engines. This guide explores core concepts, tools, and frameworks for building modern GenAI applications, including RAG, multi-agent systems, prompt engineering, and cutting-edge libraries like LangGraph.
 
 Whether you're developing chatbots, automation workflows, or knowledge systems, this guide provides a roadmap to the latest advancements. It also introduces additional terms not covered in the course videos. These terms are essential for enhancing your understanding of the course concepts.
 
-Core GenAI Concepts & Terminologies
+## Core GenAI Concepts & Terminologies
 Foundational Concepts
 
 | Term | Definition | Examples/Use Cases |
@@ -21,8 +23,9 @@ Foundational Concepts
 | Orchestration | Tools to manage and coordinate workflows involving multiple AI components. | LangChain, LlamaIndex |
 | Fine-tuning | Adapting pre-trained models for specific tasks using domain-specific data. | LoRA (Low-Rank Adaptation), QLoRA (quantized fine-tuning) |
 
-Tools & Frameworks
+## Tools & Frameworks
 Model Development & Deployment
+
 Tool/Framework
 
 | Definition | Examples/Use Cases | Reference | Link |
@@ -35,7 +38,7 @@ Tool/Framework
 | LlamaIndex | A tool to connect LLMs to structured or unstructured data sources. | Building Q&A systems over private documents | LlamaIndex |
 | LangGraph | A library for building stateful, multi-actor applications with LLMs. | Cyclic workflows, agent simulations | LangGraph |
 
-Retrieval & Infrastructure
+## Retrieval & Infrastructure
 Tool/Framework
 
 | Definition | Examples/Use Cases | Reference | Link |
@@ -44,7 +47,7 @@ Tool/Framework
 | Pinecone | A managed cloud service for vector database operations. | Storing embeddings for real-time retrieval | Pinecone |
 | Haystack | An end-to-end framework for building RAG pipelines. | Deploying enterprise search systems | Haystack |
 
-Advanced Prompting Techniques
+## Advanced Prompting Techniques
 
 | Concept | Definition | Example |
 | ---- | ---- | ---- |
@@ -53,22 +56,29 @@ Advanced Prompting Techniques
 | Chain-of-Thought | Encouraging step-by-step reasoning. | "First, calculate X. Then, compare it to Y. Final answer: ___” |
 | Prompt Chaining | Breaking complex tasks into smaller prompts executed sequentially. | Prompt 1: Extract keywords → Prompt 2: Generate summary from keywords. |
 
-Key Architectures & Workflows
-RAG Pipeline
-Retrieval: Query vector database (for example, Pinecone) for context.
+## Key Architectures & Workflows
 
-Augmentation: Combine context with user prompt.
+### RAG Pipeline
+Retrieval
+: Query vector database (for example, Pinecone) for context.
 
-Generation: LLM (for example, GPT-4) produces final output.
+Augmentation
+: Combine context with user prompt.
 
-Multi-Agent System
-Agents: Specialized roles (for example, researcher, writer, critic).
+Generation
+: LLM (for example, GPT-4) produces final output.
 
-Orchestration: LangGraph for cyclic workflows, AutoGen for conversations, and so on.
+### Multi-Agent System
+Agents
+: Specialized roles (for example, researcher, writer, critic).
 
-Tools: Web search, code execution, API integrations, and so on.
+Orchestration
+: LangGraph for cyclic workflows, AutoGen for conversations, and so on.
 
-References
+Tools
+: Web search, code execution, API integrations, and so on.
+
+## References
 Retrieval-Augmented Generation (RAG) Paper
 
 Chain-of-Thought Prompting
