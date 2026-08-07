@@ -1,3 +1,10 @@
-.openai_api_key
+
+*-api-key.txt
+*-project-id.txt
+
 __pycache__/
 .ipynb_checkpoints/
+.vscode/
+**/.venv
+**/myenv
+
