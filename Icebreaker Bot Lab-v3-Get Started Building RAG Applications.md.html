@@ -1,0 +1,10 @@
+<script>
+  const base_url = "https://editor.skills.network/render?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6ZmFsc2UsImxhYiI6eyJpZCI6MCwibmFtZSI6IiIsInRvb2xfdHlwZSI6InRoZWlhIn0sInZlcnNpb24iOnsiaWQiOjB9LCJhdXRob3IiOnsiZW1haWwiOiIifSwibWRfdXJsIjoiaHR0cHM6Ly9jZi1jb3Vyc2VzLWRhdGEuczMudXMuY2xvdWQtb2JqZWN0LXN0b3JhZ2UuYXBwZG9tYWluLmNsb3VkLzhwY0l1bXBpVElrWDd1cVRfZ25mZncvSWNlYnJlYWtlciUyMEJvdCUyMExhYi12My1HZXQlMjBTdGFydGVkJTIwQnVpbGRpbmclMjBSQUclMjBBcHBsaWNhdGlvbnMubWQ_dD0xNzgxMTE5Njk5IiwiaWF0IjoxNzgxMTE5NzAwLCJleHAiOjE3ODExMjMzMDB9.G69mH1SOKUP8QgAgXQXZQMimGuKe4DF3-D5oK31LMAM";
+  const currentUrl = new URL(window.location.href);
+  const targetUrl = new URL(base_url);
+  const langParam = currentUrl.searchParams.get('lang');
+  if (langParam) {
+    targetUrl.searchParams.set('lang', langParam);
+  }
+  window.location.href = targetUrl.toString();
+</script>
