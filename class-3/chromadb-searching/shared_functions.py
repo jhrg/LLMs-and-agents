@@ -57,7 +57,9 @@ def create_similarity_search_collection(collection_name: str, collection_metadat
     except:
         pass
     
-    # Create embedding function
+    # Create embedding function. The all-MiniLM-L6-v2 model is a 'language model'
+    # but not an LLM. This is a small model that is efficient for generating 
+    # embeddings for semantic search tasks.
     sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFunction(
         model_name="all-MiniLM-L6-v2"
     )
