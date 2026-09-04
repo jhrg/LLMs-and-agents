@@ -59,7 +59,9 @@ def create_similarity_search_collection(collection_name: str, collection_metadat
     
     # Create embedding function. The all-MiniLM-L6-v2 model is a 'language model'
     # but not an LLM. This is a small model that is efficient for generating 
-    # embeddings for semantic search tasks.
+    # embeddings for semantic search tasks. It uses 384 dimensions.
+    # A bigger model like 'all-mpnet-base-v2' can be used for better accuracy but will be slower.
+    # that model uses 768 dimensions and is more resource intensive. jhrg 9/4/26
     sentence_transformer_ef = embedding_functions.SentenceTransformerEmbeddingFunction(
         model_name="all-MiniLM-L6-v2"
     )
