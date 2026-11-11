@@ -1,6 +1,3 @@
-<!-- CONTRACT: actor-driven flows through the system. Each use case is what ties
-     functional requirements together into something a real user actually does.
-     Delete the _EXAMPLE_ use case once you've seen the shape. -->
 
 # Use Cases
 
@@ -60,8 +57,3 @@ Convention: `UC-###`. Each use case follows the template below. Link related `FR
 **Related requirements:** FR-001, FR-003, FR-004, FR-006, FR-007, FR-008, IC-001, IC-002
 
 ---
-
----
-
-<!-- Copy the template above for each new use case. Sequential UC-### heading,
-     same subsection order, so /trace can parse it. -->

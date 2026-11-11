@@ -1,6 +1,3 @@
-<!-- CONTRACT: what the system must DO. One row per requirement. IDs are permanent —
-     never renumbered or reused. Dropped requirements get Status: Deprecated /
-     Superseded, not deleted. Delete the _EXAMPLE_ row once you've seen the shape. -->
 
 # Functional Requirements
 
@@ -21,8 +18,3 @@ FR reaches `Done`.
 | FR-006 | Each answer to a question cites the video timestamp(s) where the supporting information appears | Must | UC-002 | Approved |
 | FR-007 | The tool offers a command-line interface for summarizing a video and asking a question about it | Must | UC-001, UC-002 | Approved |
 | FR-008 | The tool offers a Gradio web UI, run locally, with the same summarize and question capabilities as the CLI | Must | UC-001, UC-002 | Approved |
-
-<!-- Add new rows via /new-requirement, or by hand — keep the table format. Each
-     requirement should be a single testable statement, not a paragraph. If it needs
-     a paragraph, it's probably a use case (ai-docs/requirements/use-cases.md) with this
-     as one of its acceptance criteria. -->
