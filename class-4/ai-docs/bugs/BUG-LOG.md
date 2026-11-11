@@ -41,7 +41,7 @@ deployed behavior, not something to self-report from having written a fix plan.
 **Severity:** Medium
 **Status:** Fix Planned
 **Reported:** 2026-11-11
-**Related requirements:** None documented. No NFR covers Q&A latency or watsonx usage, and that gap is worth filling with `/new-requirement`.
+**Related requirements:** NFR-002 (added after this bug was logged; before that, the correct behavior wasn't written down)
 **Fix plan:** `ai-plans/bugfix-faiss-rebuilt-per-question-plan.md`
 
 **Reproduction steps:**

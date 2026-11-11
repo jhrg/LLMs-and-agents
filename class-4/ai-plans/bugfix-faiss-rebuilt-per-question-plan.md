@@ -14,7 +14,7 @@ Each question re-chunks the transcript, re-embeds every chunk through watsonx, a
 
 ## Related requirements
 
-- None documented. No NFR states a latency or watsonx-usage target for Q&A, so "rebuild every time" breaks no written requirement, only the obvious expectation. I suggest adding an NFR through `/new-requirement`, for example: "a follow-up question on an already-loaded video makes no new transcript embedding calls".
+- NFR-002: after the first question on a video ID, later questions in the same session make 0 `embed_documents` calls and 1 `embed_query` call each. This bug violates it directly. (NFR-002 was added after the plan was drafted.)
 - Supports UC-002 indirectly.
 
 ## Fix approach
@@ -34,7 +34,7 @@ This fix stays at "cache what's already computed". Changing the chunk size or ov
 ## Verification
 
 - Re-run the BUG-LOG reproduction: question 2 on the same video makes zero `embed_documents` calls, and only one `embed_query`.
-- New offline pytest (NFR-001): use a fake embeddings class that counts calls, ask two questions on the same video ID, and assert that `embed_documents` ran once. Then switch the video ID and assert that it runs again.
+- New offline pytest (NFR-001, NFR-002): use a fake embeddings class that counts calls, ask two questions on the same video ID, and assert that `embed_documents` ran once and that each question made exactly one `embed_query` call. Then switch the video ID and assert that it runs again.
 
 ## Out of scope
 
@@ -54,3 +54,11 @@ This fix stays at "cache what's already computed". Changing the chunk size or ov
 > including a plan for each bug.)
 
 Logged BUG-002 (Medium). Root cause: per-call index construction at `ytbot.py:365-375`. Plan depends on BUG-001's per-video cache. Recommends adding a Q&A efficiency NFR.
+
+### 2026-11-11 16:19 MST — Linked NFR-002
+
+**Prompt:**
+
+> /new-requirement NFR "a second question on the same video makes no new transcript embedding calls".
+
+Added NFR-002 (Performance, Must, Approved). Updated Related requirements and Verification to cite it. The fix approach is unchanged.
