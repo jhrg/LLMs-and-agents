@@ -57,7 +57,7 @@ Recommendation: treat the five bugfix plans as superseded by this plan, rather t
 
 Steps:
 1. Layout: `ytbot/` (`__init__.py`, `__main__.py`, `config.py`, `video.py`, `transcript.py`, `models.py`, `summarize.py`, `qa.py`, `cli.py`, `web.py`) and `tests/`. Move the course script to `course/ytbot.py`, unchanged, as a reference. A `ytbot.py` next to a `ytbot/` package makes imports ambiguous (open question 8).
-2. Create a Python ≥ 3.11 venv, install the current releases of `langchain-core`, `langchain-text-splitters`, `langchain-community`, the provider packages v1 registers (proposed: `langchain-ibm` + `ibm-watsonx-ai`, `langchain-anthropic`, `langchain-openai`; open question 9), `faiss-cpu`, `youtube-transcript-api`, `gradio` and `pytest`, check that they import, and pin them with `==` in `requirements.txt`.
+2. Create a Python ≥ 3.11 venv, install the current releases of `langchain-core`, `langchain-text-splitters`, `langchain-community`, the provider packages v1 registers (`langchain-ibm` + `ibm-watsonx-ai`, `langchain-anthropic`, `langchain-openai`; open question 9), `faiss-cpu`, `youtube-transcript-api`, `gradio` and `pytest`, check that they import, and pin them with `==` in `requirements.txt`.
 3. `pytest.ini` (or `pyproject` `[tool.pytest]`): register a `live` marker, and set `addopts = -m "not live"` so the default run is offline.
 4. `config.py`: a `Settings` dataclass loaded from the environment and then the optional key file. It holds `llm_provider` and `embedding_provider` (`YTBOT_LLM_PROVIDER`, `YTBOT_EMBEDDING_PROVIDER`), `llm_model` and `embedding_model` (`YTBOT_LLM_MODEL`, `YTBOT_EMBEDDING_MODEL`), provider-specific settings (watsonx URL and project ID), and the summary context budget. Credentials are checked only for the selected providers. An unknown provider name raises `ConfigError` listing the registered ones. A missing variable raises `ConfigError` naming it. Default providers: TBD (IC-006, open question 10). Default model IDs per provider: open question 7. For watsonx they stay `ibm/granite-4-h-small` and `ibm/granite-embedding-278m-multilingual`.
 5. `.gitignore`: `.venv/`, `__pycache__/`, `.env*`.
@@ -154,7 +154,7 @@ Steps:
 6. **Key file location (IC-002).** For example `~/.config/ytbot/env`, or a path from `YTBOT_ENV_FILE`. Doesn't block, because environment variables work first.
 7. **Model IDs and access.** Default LLM and embedding model IDs for each registered provider, and whether your accounts can use them. For watsonx, are `ibm/granite-4-h-small` and `ibm/granite-embedding-278m-multilingual` available in your account and region? Blocks Phase 7 and the Phase 1 defaults.
 8. **Where the original script goes.** The proposal is `course/ytbot.py`, kept unchanged. Blocks Phase 1 step 1.
-9. **Which providers v1 registers, and how.** IC-006 allows any provider with a LangChain integration, but every registered provider adds a pinned dependency and tests. Recommendation: chat models from watsonx, Anthropic and OpenAI; embeddings from watsonx and OpenAI. Local embeddings (`langchain-huggingface`) need a no-key option, but they pull in torch, so leave them out unless you want them. Use an explicit registry, not `init_chat_model` / `init_embeddings`. The `langchain` helpers would make any provider work with no code, but they aren't in IC-005's import list, and they hide provider-specific settings such as the watsonx project ID. Using them would mean amending IC-005. Blocks Phase 1 step 2 and Phase 3 step 1.
+9. ~~**Which providers v1 registers.**~~ Resolved 2026-11-11: LLM from watsonx, Anthropic and OpenAI; embeddings from watsonx and OpenAI. No local embeddings. Still open: whether to use the explicit registry (recommended) or LangChain's `init_chat_model` / `init_embeddings` helpers. The helpers aren't in IC-005's import list and hide provider-specific settings such as the watsonx project ID, so using them would mean amending IC-005.
 10. **Default providers (IC-006 says TBD).** Which LLM and embedding providers apply when `YTBOT_*_PROVIDER` isn't set. Alternatively, have no default and require the setting, which gives a clear `ConfigError` instead of a surprise bill. Blocks Phase 1 step 4.
 
 ## Out of scope
@@ -184,3 +184,11 @@ Re-read the requirement and constraint docs (no ADRs exist), confirmed that FEAT
 > commit to jhrg/llm-providers and update the plan there
 
 On branch `jhrg/llm-providers`, after commit `3316af9` superseded IC-001 with IC-006. Re-read the requirement, constraint and decision docs (no ADRs, no relevant deep-dives). Replaced the watsonx-only design with a configurable provider registry: per-provider credentials in config (Phase 1), registry factories with lazy imports and monkeypatched-constructor tests (Phase 3), live tests parametrized by provider (Phase 7), and an updated out-of-scope list. Marked open questions 2 and 5 resolved by the current FR-001 and UC-002 text. Added open question 9 (which providers, and registry vs `init_chat_model`) and 10 (default provider). Flagged UC-001's precondition, which still says "watsonx credentials", as stale. Left: answers to open questions 9 and 10, and the UC-001 wording fix.
+
+### 2026-11-11 22:04 MST — Open question 9 answered
+
+**Prompt:**
+
+> Q9: watsonx, Anthropic and OpenAI for the LLM, and watsonx and OpenAI for embeddings. Push all four branches
+
+Recorded the provider set in open question 9 and Phase 1 step 2. The registry vs `init_chat_model` part of question 9 wasn't addressed, so the explicit registry stays the recommendation. Left: open question 10 (default provider) and the UC-001 precondition wording.
