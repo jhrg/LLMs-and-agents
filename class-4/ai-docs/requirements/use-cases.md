@@ -50,7 +50,7 @@ Convention: `UC-###`. Each use case follows the template below. Link related `FR
 **Alternate / exception flows:**
 - Same as UC-001 for an invalid reference, a missing transcript, or bad credentials
 - Empty question → prompt the user for a question (no LLM call is made)
-- Transcript doesn't contain the answer → the tool says so instead of answering from outside the video (behavior: TBD, confirm)
+- Transcript doesn't contain the answer → the tool says so instead of answering from outside the video
 
 **Postconditions:** Answer is shown with timestamp citations
 

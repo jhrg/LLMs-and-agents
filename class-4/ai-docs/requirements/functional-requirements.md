@@ -10,7 +10,7 @@ FR reaches `Done`.
 
 | ID | Requirement | Priority | Related Use Cases | Status |
 |---|---|---|---|---|
-| FR-001 | Given a YouTube video, the tool fetches that video's transcript (preferred language and manual vs. auto-generated policy: TBD) | Must | UC-001, UC-002 | Approved |
+| FR-001 | Given a YouTube video, the tool fetches that video's transcript (preferred language and manual vs. auto-generated policy: English, with manual or auto-generated transcripts, with manual preferred) | Must | UC-001, UC-002 | Approved |
 | FR-002 | The tool produces a concise one-paragraph summary of a video from its transcript | Must | UC-001 | Approved |
 | FR-003 | The tool answers a free-text question about a video by retrieving the relevant transcript segments and generating an answer from them | Must | UC-002 | Approved |
 | FR-004 | The tool accepts any of these video references: `www.`/`m.youtube.com/watch?v=<id>` (with extra query parameters allowed), `youtu.be/<id>`, `youtube.com/shorts/<id>`, or a bare 11-character video ID | Must | UC-001, UC-002 | Approved |

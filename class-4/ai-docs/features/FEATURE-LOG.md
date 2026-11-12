@@ -21,23 +21,19 @@ the plan document.
 
 ---
 
-## FEAT-EXAMPLE — Password reset by email
+## FEAT-001 — Standalone ytbot v1
 
-*(delete this section once you've seen the shape)*
+**Status:** Planned
+**Created:** 2026-11-11
+**Requirements:** FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, UC-001, UC-002, NFR-001
+**Constraints:** IC-001, IC-002, IC-003, IC-004, IC-005
+**Plan:** `ai-plans/standalone-ytbot-v1-plan.md`
+**Origin:** The 2026-11-11 `/init-planning` interview (no link)
 
-**Status:** In Progress
-**Created:** YYYY-MM-DD
-**Requirements:** FR-EXAMPLE, UC-EXAMPLE
-**Constraints:** None found
-**Plan:** `ai-plans/password-reset-plan.md`
-**Origin:** https://github.com/OWNER/REPO/issues/42
-
-**Summary:** Users who forget their password can reset it through a time-limited
-link sent to their registered email address.
+**Summary:** Turns the course-only `ytbot.py` into a tool that runs on your own machine with your own watsonx account: transcript fetch, summaries (including long videos), timestamped Q&A, and broad URL support, through a CLI and a local Gradio UI.
 
 **Status history:**
-- YYYY-MM-DD — logged as `Planned`
-- YYYY-MM-DD — `Planned` → `In Progress`
+- 2026-11-11 — logged as `Planned`
 
 ---
 
