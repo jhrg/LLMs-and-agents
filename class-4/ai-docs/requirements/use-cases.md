@@ -28,7 +28,7 @@ Convention: `UC-###`. Each use case follows the template below. Link related `FR
 
 **Postconditions:** Summary is shown. Whether it is also saved anywhere: TBD
 
-**Related requirements:** FR-001, FR-002, FR-004, FR-005, FR-007, FR-008, IC-001, IC-002
+**Related requirements:** FR-001, FR-002, FR-004, FR-005, FR-007, FR-008, IC-006, IC-002
 
 ---
 
@@ -54,6 +54,6 @@ Convention: `UC-###`. Each use case follows the template below. Link related `FR
 
 **Postconditions:** Answer is shown with timestamp citations
 
-**Related requirements:** FR-001, FR-003, FR-004, FR-006, FR-007, FR-008, IC-001, IC-002
+**Related requirements:** FR-001, FR-003, FR-004, FR-006, FR-007, FR-008, IC-006, IC-002
 
 ---

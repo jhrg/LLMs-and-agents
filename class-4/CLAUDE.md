@@ -146,7 +146,7 @@ asked to review or tighten those docs — it reports findings and never edits.
 ## Conventions
 
 - **Language/stack:** Python, LangChain (current, non-deprecated APIs only, see IC-005),
-  IBM watsonx for the LLM and embeddings (IC-001), FAISS for vector search, Gradio for the web UI,
+  any provider with a LangChain integration for the LLM and embeddings, e.g. IBM watsonx, Anthropic, OpenAI (IC-006), FAISS for vector search, Gradio for the web UI,
   `youtube-transcript-api` for transcripts.
 - **Where code lives:** `class-4/` in the `LLMs-and-agents` repo. `ytbot.py` is the original
   course code. It only runs inside the Coursera sandbox, which supplies watsonx credentials implicitly.

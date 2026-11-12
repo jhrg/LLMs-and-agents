@@ -26,7 +26,7 @@ the plan document.
 **Status:** Planned
 **Created:** 2026-11-11
 **Requirements:** FR-001, FR-002, FR-003, FR-004, FR-005, FR-006, FR-007, FR-008, UC-001, UC-002, NFR-001
-**Constraints:** IC-001, IC-002, IC-003, IC-004, IC-005
+**Constraints:** IC-002, IC-003, IC-004, IC-005, IC-006
 **Plan:** `ai-plans/standalone-ytbot-v1-plan.md`
 **Origin:** The 2026-11-11 `/init-planning` interview (no link)
 
