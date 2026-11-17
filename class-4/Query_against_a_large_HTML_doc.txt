@@ -1,0 +1,16 @@
+Question:
+How would I use any one of these retrievers with a large HTML document so that the responses would direct people to specific sections marked with anchors?
+
+Answer:
+Tess: For a large HTML document, the key is to preserve each section’s anchor as metadata while you split and index the content. Then the retriever can return the relevant text along with the anchor, so the answer can link directly to that section.
+Adrian: Exactly. Parse the HTML by meaningful headings or anchor elements, create documents with fields like `section_id`, `title`, and `url`, and embed the section text. When retrieval finds a match, pass that metadata to the LLM and instruct it to cite links such as `/guide.html#installation`.
+Tess: And if sections are too large, you can use a parent document retriever: index smaller chunks for precision, but return the parent section with its preserved anchor for the final citation.
+Adrian: Right. In practice, your HTML loader should avoid treating the page as one giant blob. Extract each heading and its following content, map it to an anchor—say, `#installation`—and store that anchor in the document metadata. If the HTML has no stable IDs, generate them yourself and add matching `id` attributes to the page.
+Tess: How do you make sure the final response actually uses those anchors instead of just mentioning the section name?
+Adrian: Include the metadata in the retrieved context and give the model a strict instruction: every factual section should include a Markdown link using the provided URL and anchor, and it must never invent an anchor. You can also format the retrieved result as a citation object, with fields for `title`, `text`, and `url`.
+Tess: Would multi-query or self-query add much here?
+Adrian: Multi-query can help when users phrase the same topic in different ways. Self-query is useful if your sections have metadata like product version, audience, or document type. But the anchor handling is independent: whichever retriever you use, preserve the section URL in metadata and carry it through deduplication and reranking.
+Tess: Any final implementation advice?
+Adrian: Use stable anchors, validate links after indexing, and keep retrieved text reasonably sized so the model has enough context without flooding its prompt. Most importantly, treat citations as application data: have your code render the link from trusted metadata, rather than relying entirely on the model to construct it.
+Tess: So the recipe is: split by HTML sections, preserve or generate anchors, store them as metadata, retrieve with the strategy that fits the questions, and render verified links in the answer.
+Adrian: Exactly. That gives you precise retrieval and reliable navigation—people get the answer, plus a direct jump to the relevant part of the original HTML document.
